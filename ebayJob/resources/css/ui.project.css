@@ -1313,16 +1313,16 @@ a.list-imgtxt-item:active{
 	background:#f4f4f4 url(../img/sprite/sp01-720.png) no-repeat 0 0 / 360px;
 }
 .process-list li::after{
-	content:"▶";
+	content:"";
 	display:block;
-	color:#3665f3;
+	
 	font-size:11px;
 	line-height:18px;
 	width:20px;
 	height:20px;
 	border-radius:50%;
 	border:1px solid #f4f4f4;
-	background:#fff;
+	background:#fff url(../img/content/arrow-step.png) no-repeat 50% 50% / 7px;
 	position: absolute;
 	right:-15px;
 	top:50%;
