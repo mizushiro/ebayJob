@@ -90,6 +90,7 @@ fieldset,
 iframe,
 button {
     border: 0 none;
+    outline: 0;
 }
 
 table {
@@ -128,6 +129,7 @@ a {
     font: inherit;
     color: inherit;
     outline-offset: 1px;
+    text-decoration: none;
 }
 
 button {
@@ -263,3 +265,30 @@ caption * {
     z-index: 1;
     display: block
 }
+
+/* button */
+select {position:relative; ppearance:none; -moz-appearance:none; -webkit-appearance:none; cursor:pointer; background: url(../img/common/arrow-select.png) no-repeat  right 10px top 50% / 10px;}
+select::-ms-expand {display:none;}
+
+.btn-area {
+	width:100%;
+	position:relative;
+	margin:32px 0;
+	display: flex;
+}
+select,
+.btn-base{
+	display: block;
+	flex:1;
+	width:100%;
+	min-height:40px;
+	padding:9px 20px 7px;
+	border:1px solid #cbcbcb;
+	text-align: center;
+    font-size:13px;
+    font-weight:700;
+}
+
+
+/* select */
+
