@@ -19,13 +19,6 @@
 				callback:$plugins.common.footer 
 			});
 
-
-
-			console.log('------------------------------------------------------')
-
-			$plugins.uiCaption();
-			$plugins.uiInputClear();
-
 			$(document).on("touchstart", function(){ });
 
 		},
@@ -131,17 +124,6 @@
 		}
 	};
 
-	//callback
-	$plugins.callback = {
-		modal: function(modalId){
-			switch(modalId) {
-				case 'modalID':
-					break;  
 
-					
-			}
-		}
-	}
-   
 	
 })(jQuery, window, document);
