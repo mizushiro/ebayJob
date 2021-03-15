@@ -7,14 +7,14 @@
 
 			$plugins.uiAjax({ 
 				id: $('.base-header'), 
-				url:'/ebayJob/html/inc/header.html', 
+				url:'./inc/header.html', 
 				page:true, 
 				callback:$plugins.common.header 
 			});
 
 			$plugins.uiAjax({ 
 				id: $('.base-footer'), 
-				url:'/ebayJob/html/inc/footer.html', 
+				url:'./inc/footer.html', 
 				page:true, 
 				callback:$plugins.common.footer 
 			});
