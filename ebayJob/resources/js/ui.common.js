@@ -7,7 +7,7 @@
 
 			$plugins.uiAjax({ 
 				id: $('.base-header'), 
-				url:'./inc/header.html', 
+				url:'../../html/inc/header.html', 
 				page:true, 
 				callback:$plugins.common.header 
 			});
