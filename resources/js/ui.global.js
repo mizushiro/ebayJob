@@ -585,7 +585,78 @@ if (!Object.keys){
 		}
 	}
 
+	/* ------------------------
+	 * [base] loading
+	 * date : 2020-06-09
+	------------------------ */
+	win[global] = win[global].uiNameSpace(namespace, {
+		uiLoading: function (opt) {
+			return createUiLoading(opt);
+		}
+	});
+	win[global].uiLoading.timerShow = {};
+	win[global].uiLoading.timerHide = {};
+	win[global].uiLoading.option = {
+		id: null,
+		visible: true,
+		txt : null,
+		styleClass : 'orbit' //time
+	}
+	function createUiLoading(opt) {
+		var opt = $.extend(true, {}, win[global].uiLoading.option, opt);
+		var id = opt.id;
+		var styleClass = opt.styleClass;
+		var loadingVisible = opt.visible;
+		var txt = opt.txt;
+		var	$selector = win[global].uiSelectorType(id);
+		var htmlLoading = '';
 
+		$('.ui-loading').not('.visible').remove();
+
+		id === null ?
+			htmlLoading += '<div class="ui-loading '+ styleClass +'">':
+			htmlLoading += '<div class="ui-loading '+ styleClass +'" style="position:absolute">';
+		htmlLoading += '<div class="ui-loading-wrap">';
+
+		txt !== null ?
+			htmlLoading += '<strong class="ui-loading-txt"><span>'+ txt +'</span></strong>':
+			htmlLoading += '';
+
+		htmlLoading += '</div>';
+	
+		htmlLoading += '</div>';
+
+		if(loadingVisible) {
+			clearTimeout(win[global].uiLoading.timerShow);
+			clearTimeout(win[global].uiLoading.timerHide);
+			win[global].uiLoading.timerShow = setTimeout(function(){
+				showLoading();
+			},300);
+			
+		}
+		if(!loadingVisible) {
+			clearTimeout(win[global].uiLoading.timerShow);
+			win[global].uiLoading.timerHide = setTimeout(function(){
+				hideLoading();
+			},300)
+			
+		}	
+
+		function showLoading(){
+			!$selector.find('.ui-loading').length && $selector.append(htmlLoading);	
+			htmlLoading = '';		
+			$selector.data('loading', true);
+			$('.ui-loading').addClass('visible').removeClass('close');			
+		}
+		function hideLoading(){
+			$selector.data('loading', false);
+			$('.ui-loading').addClass('close');	
+			setTimeout(function(){
+				$('.ui-loading').removeClass('visible')
+				$('.ui-loading').remove();
+			},300);
+		}
+	}
 	/* ------------------------
 	 * [base] URL parameter
 	 * date : 
