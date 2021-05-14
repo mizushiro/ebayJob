@@ -32,6 +32,10 @@
 	<script src="../resources/js/ui.common.js"></script>
     <script src="../resources/js/lib/slick.min.js"></script>
     
+    <style>
+        input[type=range] { -webkit-appearance: none; width: 100%; height: 6px; background: #d5d4d3; cursor: pointer; border-radius: 0; /* iOS */ transition: background 450ms ease-in; } input[type=range]:focus { outline: none; } input[type=range]::-webkit-slider-thumb{ -webkit-appearance: none; width: 12px; height: 12px; background: #fff; border: 1px solid dodgerblue; border-radius:50%; cursor: pointer; } input[type=range]::-moz-range-thumb{ -webkit-appearance: none; width:10px; height:10px; background: #fff; border: 1px solid dodgerblue; border-radius:50%; cursor: pointer; }
+
+    </style>
 
 </head>
 <body class="guide">
@@ -116,6 +120,11 @@
                     </div>
                 </div>
             </div>
+
+            <input type="range" value="0">
+
+            <input type="range" value="50">
+
 
             <section class="para-group">
                 <div class="group-line">
@@ -729,6 +738,32 @@
                 });
             });
         })(jQuery, window, document);
+
+
+        function rangeStyle(){
+            const el_input_range = document.querySelectorAll('input[type="range"]');
+            const len = el_input_range.length;
+            const bar_color = 'blue';
+            const bg_color = 'black';
+
+            for (let i = 0; i < len; i++) {
+                const range = el_input_range[i];
+                const now_val = range.value;
+
+                range.setAttribute('style', 'background:linear-gradient(to right, '+bar_color+' 0%, '+bar_color+' '+now_val+'%, '+bg_color+' '+now_val+'%, '+bg_color+' 100%)');
+                range.addEventListener('input', barStyle);
+            }
+            
+            function barStyle(event){
+                const target = event.target;
+                const target_val = target.value;
+
+                target.setAttribute('style', 'background:linear-gradient(to right, '+bar_color+' 0%, '+bar_color+' '+target_val+'%, '+bg_color+' '+target_val+'%, '+bg_color+' 100%)');
+            }
+        }
+        rangeStyle();
+
+
     </script>
     
 </body>

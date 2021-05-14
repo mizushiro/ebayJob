@@ -384,9 +384,11 @@
 	color:#85b816 !important;
 }
 .mgt-n{margin-top:0 !important;}
+.mgt-s{margin-top:16px !important;}
 .mgt-m{margin-top:32px !important;}
 .mgb-m{margin-bottom:32px !important;}
 .mgtb-m{margin-bottom:32px !important; margin-top:32px !important;}
+.mgtb-s{margin-bottom:16px !important; margin-top:16px !important;}
 
 
 .group-line {
@@ -425,6 +427,13 @@
 	font-family: 'Gmarket Sans';
 	font-weight:700;
 	color:#3666f3;
+}
+.tit-s{
+	font-size: 1.5rem;
+	font-weight: 700;
+	color:#28306b;
+	line-height: 1.2;
+	margin-bottom:1.3rem
 }
 .tit-m{
 	font-size: 1.8rem;
@@ -473,7 +482,12 @@ ul.bul-dot li::before{
 	position:relative;
 	width:calc(100% + 48px);
 	margin: 0 0 0 -24px;
-
+}
+.full-div.type-right{
+	padding-left:24px;
+}
+.full-div.type-left{
+	padding-right:24px;
 }
 .full-div img {
 	width:100%;
