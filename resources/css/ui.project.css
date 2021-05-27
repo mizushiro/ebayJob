@@ -134,6 +134,12 @@
 .header-wrap.page-32{
 	background:url(../img/content/bgnav32.jpg) no-repeat 50% 0 / cover;
 }
+.header-wrap.page-51{
+	background:url(../img/content/bgnav51.jpg) no-repeat 50% 0 / cover;
+}
+.header-wrap.page-52{
+	background:url(../img/content/bgnav52.jpg) no-repeat 50% 0 / cover;
+}
 
 .header-wrap.page-0 .logo{
 	background-position:0 0;
@@ -1535,4 +1541,28 @@ a.list-imgtxt-item:active{
     100% {display:none; z-index: -1;}
 }
 
-
+/*  약관 */
+.terms-txt-a {color:#333}
+.terms-txt-a ~ .terms-txt-a {margin-top:1.2rem}
+.terms-list {margin-top:1.2rem}
+.terms-txt-b {padding-left:1.6rem;text-indent:-1.6rem;margin-top:.8rem;color:#333}
+.terms-list-b {margin-top:.8rem}
+.terms-list-b .terms-item {font-size:1.2rem;padding-left:1.2rem;text-indent:-1.2rem;color:#888}
+.terms-list-b .terms-item ~ .terms-item {margin-top:.4rem}
+.terms-txt-c {color:#999;font-size:11px;padding-left:.8rem;text-indent:-.8rem;margin-top:1.2rem}
+.terms-txt-c ~ .terms-txt-c {margin-top:0}
+.terms-dl {margin-top:.8rem;display:flex}
+.terms-dl ~ .terms-dl {margin-top:.4rem}
+.terms-dl .terms-dt {color:#111;font-weight:600;font-size:1.3rem;white-space:nowrap;padding-right:.4rem;line-height:2rem}
+.terms-dl .terms-dd {color:#666;font-size:1.2rem;flex:1;line-height:2rem}
+.bul-dot.small {margin-top:.8rem}
+.bul-dot.small li {font-size:1.2rem}
+.bul-dot.small li ~ li {margin-top:.4rem}
+.bul-dot.small li a {color:#28306b;text-decoration:underline;font-weight:600}
+.bul-dot.small li::before {top:6px}
+.terms-tb {margin-top:.8rem;border:1px solid #ccc}
+.terms-tb thead th {padding:.8rem;text-align:center;border-bottom:1px solid #ccc;background-color:#f6f6f6}
+.terms-tb tbody td ~ td,
+.terms-tb thead th ~ th {border-left:1px solid #ccc}
+.terms-tb tbody td {padding:.6rem;font-size:1.2rem}
+.terms-tb tbody tr ~ tr td {border-top:1px solid #ccc}

@@ -75,6 +75,11 @@
 				break;
 				case 44 : subTitle('마이페이지');
 				break;
+
+				case 51 : subTitle('이메일무단수집거부');
+				break;
+				case 52 : subTitle('개인정보처리방침');
+				break;
 		
 				default: subTitle('main');
 				break;
