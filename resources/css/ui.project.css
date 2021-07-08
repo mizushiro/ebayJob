@@ -1001,22 +1001,28 @@ a.list-imgtxt-item:active{
 }
 
 .list-txt.type-img .img{
-	position: absolute;
+	/*position: absolute;
 	top:0; 
-	left:0;
-	width:120px;
+	left:0;*/
+	max-width:130px;
 	height:80px;
 	overflow: hidden;
 }
 .list-txt.type-img .img img{
-	width:100%;
+	width:120px;
+	height:100%;
+	object-fit:cover;
+	margin-right:10px;
 }
 .list-txt.type-img .list-txt-item {
-	display:block;
+	display:flex;
 	width:100%;
 	position:relative;
-	padding:0 5px 0 130px;
+	padding:0 5px;
 	min-height: 80px;;
+}
+.list-txt.type-img .list-txt-item .subject-date {
+	flex:1;
 }
 .list-txt.type-img .list-txt-item + .list-txt-item{
 	border-top:0;
